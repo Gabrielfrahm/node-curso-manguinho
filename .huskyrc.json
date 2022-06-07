@@ -1,5 +1,5 @@
 {
-  "kooks": {
+  "hooks": {
     "pre-commit": "lint-staged"
   }
 }
