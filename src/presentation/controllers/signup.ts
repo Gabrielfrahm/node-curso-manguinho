@@ -16,7 +16,9 @@ export class SingUpController implements Controller {
       if (!httpRequest.body[field]) {
         return BadRequest(new MissingParamError(field))
       }
+
       const isValidEmail = this.emailValidator.isValid(httpRequest.body.email)
+
       if (!isValidEmail) {
         return BadRequest(new InvalidParamError('email'))
       }
