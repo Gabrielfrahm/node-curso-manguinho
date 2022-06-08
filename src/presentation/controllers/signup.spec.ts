@@ -1,4 +1,4 @@
-import { SingUpController } from './singup'
+import { SingUpController } from './signup'
 import { MissingParamError } from '../error/missing-param-error'
 
 describe('singUp controller', () => {
