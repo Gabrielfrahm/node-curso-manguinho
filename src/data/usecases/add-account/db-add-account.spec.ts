@@ -2,7 +2,7 @@ import { Encrypter } from '../../protocols/encrypter'
 import { DbAddAccount } from './db-add-account'
 
 const makeEncrypter = (): Encrypter => {
-  class EncrypterStub {
+  class EncrypterStub implements Encrypter {
     async encrypt (value: string): Promise<string> {
       return await Promise.resolve('hashed_password')
     }
