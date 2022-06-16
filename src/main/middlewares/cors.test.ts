@@ -4,7 +4,7 @@ import app from '../config/app'
 describe('CORS Middleware', () => {
   it('Should enable CORS', async () => {
     app.post('/test_cors', (req, res) => {
-      res.send()
+      res.send('')
     })
     await request(app)
       .post('/test_cors')
