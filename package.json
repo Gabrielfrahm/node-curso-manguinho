@@ -6,11 +6,11 @@
   "license": "MIT",
   "scripts": {
     "start": "sucrase-node src/main/server.ts",
-    "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
+    "test": "jest --passWithNoTests --silent --noStackTrace --runInBand --detectOpenHandles",
     "test:verbose": "jest --passWithNoTests --runInBand",
     "test:unit": "jest --passWithNoTests --silent --noStackTrace --runInBand --watch -c jest-unit-config.ts",
     "test:integration": "jest --passWithNoTests --silent --noStackTrace --runInBand --watch -c jest-integration-config.ts",
-    "test:staged": "jest --passWithNoTests --silent --noStackTrace --runInBand --findRelatedTests",
+    "test:staged": "jest --passWithNoTests --silent --noStackTrace --runInBand --detectOpenHandles --findRelatedTests src/**/**/*.ts",
     "test:ci": "jest --passWithNoTests --silent --noStackTrace --runInBand --coverage",
     "prepare": "husky install"
   },
