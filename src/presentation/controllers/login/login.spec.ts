@@ -118,7 +118,7 @@ describe('Login Controller', () => {
     expect(httpResponse).toEqual(serverError(new Error()))
   })
 
-  it('Should returns 401 if invalid credentials are provided', async () => {
+  it('Should returns 200 if valid credentials are provided', async () => {
     const { sut } = makeSut()
 
     const httpResponse = await sut.handle(makeHttpRequestFake())

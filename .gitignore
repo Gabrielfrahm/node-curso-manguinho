@@ -1,4 +1,6 @@
 *node_modules
 dist
 coverage
+./globalConfig.json
+*globalConfig.json
 globalConfig.json
