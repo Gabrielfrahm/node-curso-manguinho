@@ -4,7 +4,6 @@ import { BadRequest, serverError, ok } from '../../helper/http-helper'
 
 export class SingUpController implements Controller {
   constructor (
-
     private readonly addAccount: AddAccount,
     private readonly validation: Validation
   ) {
@@ -18,15 +17,12 @@ export class SingUpController implements Controller {
       if (error) {
         return BadRequest(error)
       }
-
       const { email, password, name } = httpRequest.body
-
       const account = await this.addAccount.add({
         name,
         email,
         password
       })
-
       return ok(account)
     } catch (error) {
       return serverError(error)
