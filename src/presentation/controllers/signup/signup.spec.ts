@@ -71,23 +71,6 @@ const makeSut = (): SutTypes => {
 }
 
 describe('singUp controller', () => {
-  it('should return 400 if no password confirmations fails', async () => {
-    const { sut } = makeSut()
-
-    const httpRequest = {
-      body: {
-        name: 'any_name',
-        email: 'any_email@mail.com',
-        password: 'any_password',
-        passwordConfirmation: 'invalid_password'
-      }
-    }
-
-    const httpResponse = await sut.handle(httpRequest)
-
-    expect(httpResponse).toEqual(BadRequest(new InvalidParamError('passwordConfirmation')))
-  })
-
   it('should return 400 if an invalid email is provided', async () => {
     const { sut, emailValidatorStub } = makeSut()
 
